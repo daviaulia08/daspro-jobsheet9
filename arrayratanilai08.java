@@ -5,21 +5,35 @@ public class arrayratanilai08 {
 
         Scanner sc = new Scanner (System.in);
 
-        int[] nilai = new int[10];
-        double total = 0;
-        double rata;
+        System.out.print("Masukkan jumlah mahasiswa : ");
+        int jumlah = sc.nextInt();
+
+        int[] nilai = new int[jumlah];
+        double nilaiLulus = 0;
+        double nilaiTidakLulus = 0;
 
         for (int i = 0; i < nilai.length; i++) {
             System.out.print("Masukkan nilai mahasiswa ke-" + (i+1) + " : ");
             nilai[i] = sc.nextInt();
         }
         
+        double jumlahLulus = 0;
+        double jumlahTidakLulus = 0;
+
         for (int i = 0; i < nilai.length; i++) {
-            total += nilai[i];
+            if (nilai[i] > 70) {
+                nilaiLulus += nilai[i];
+                jumlahLulus++;
+            }
+            else {
+                nilaiTidakLulus += nilai[i];
+                jumlahTidakLulus++;
+            }    
         }
 
-        rata = total/nilai.length;
-        System.out.println("Rata-rata nilai = " + rata );
-
+        double rataLulus = nilaiLulus/jumlahLulus;
+        double rataTidakLulus = nilaiTidakLulus/jumlahTidakLulus;
+        System.out.println("Rata-rata nilai lulus = " + rataLulus);
+        System.out.println("Rata-rata nilai tidak lulus = " + rataTidakLulus);
     }
 }
