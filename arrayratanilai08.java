@@ -6,7 +6,7 @@ public class arrayratanilai08 {
         Scanner sc = new Scanner (System.in);
 
         System.out.print("Masukkan jumlah mahasiswa : ");
-        int jumlah = sc.nextInt();
+        int jumlah = sc.nextInt(); 
 
         int[] nilai = new int[jumlah];
         double nilaiLulus = 0;
