@@ -28,6 +28,10 @@ public class searchnilai08 {
                 System.out.println();
                 break;
             }
+            else {
+                System.out.println("Nilai yang dicari tidak ditemukan.");
+                break;
+            }
         }
     }
 }
